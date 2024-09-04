@@ -1,18 +1,25 @@
 @{
     ViewBag.Title = "Index";
+    ViewData["Message"] = "Лабораторная работа №2";
 }
 
 <main class="container">
+        <h1>@ViewData["Message"]</h1>
         <h1 class="text-uppercase">Список</h1>
         <ol type="A" class="mb-4">
-            <li>List element 1</li>
-            <li>List element 2</li>
-            <li>List element 3</li>
+            @for (int i = 1; i <= 3; i++)
+            {
+                <li>List element @i</li>
+            }
         </ol>
         
         <h1 class="text-uppercase mt-4">Форма</h1>
         
         <form method="get" class="mb-4">
+            <div class="mb-4">
+                <label for="selectList" class="form-label">Выберите элемент:</label>
+                <select asp-items="ViewBag.SelectList" class="form-select" id="selectList" name="selectList"></select>
+            </div>
             <div class="form-check mb-2 ms-3">
                 <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="1">
                 <label class="form-check-label" for="checkbox1">
@@ -50,7 +57,6 @@
                     Radio 3
                 </label>
             </div>
-
             <div class="mb-3 ms-3">
                 <label for="inputText1" class="form-label">Login</label>
                 <input type="text" class="form-control" id="inputText1" name="inputText1">

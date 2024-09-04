@@ -1,0 +1,26 @@
+@await Component.InvokeAsync("Cart")
+
+<div class="dropdown ms-4 nav-color">
+        <button class="btn btn-secondary dropdown-toggle"
+            type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+        User@gmail.com
+        <img src="~/images/default.png" width="30"
+            alt="User" class="rounded nav-color" />
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li>
+                <span class="dropdown-item-text">
+                <img src="~/images/default.png"
+                    width="50" alt="User" class="rounded" />
+                    user@gmail.com
+                </span>
+            </li>
+
+            <li><a asp-controller="Cart" asp-action="Index" class="nav-item nav-link">Корзина</a></li>
+            <li><a asp-controller="Account" asp-action="Logout" class="nav-item nav-link">LogOut</a></li>
+            <li><a asp-controller="Account" asp-action="Logout" class="dropdown-item">LogOut</a></li>
+        </ul>
+    </div>

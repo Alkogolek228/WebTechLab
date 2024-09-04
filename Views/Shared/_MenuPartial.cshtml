@@ -1,0 +1,16 @@
+@{
+    string currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    string currentArea = ViewContext.RouteData.Values["area"]?.ToString();
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">WebLabsV02</a>
+    <div class="navbar-nav">
+        <a asp-controller="Home" asp-action="Index" class="nav-item nav-link @(currentController == "Home" ? "active" : "")">Лб 1</a>
+        <a asp-controller="Product" asp-action="Index" class="nav-item nav-link @(currentController == "Product" ? "active" : "")">Каталог</a>
+        <a asp-area="Admin" asp-page="/Index" class="nav-item nav-link @(currentArea == "Admin" ? "active" : "")">Администрирование</a>
+    </div>
+</nav>
