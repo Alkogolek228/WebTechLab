@@ -1,0 +1,64 @@
+@{
+    ViewBag.Title = "Index";
+}
+
+<main class="container">
+        <h1 class="text-uppercase">Список</h1>
+        <ol type="A" class="mb-4">
+            <li>List element 1</li>
+            <li>List element 2</li>
+            <li>List element 3</li>
+        </ol>
+        
+        <h1 class="text-uppercase mt-4">Форма</h1>
+        
+        <form method="get" class="mb-4">
+            <div class="form-check mb-2 ms-3">
+                <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="1">
+                <label class="form-check-label" for="checkbox1">
+                    Checkbox 1
+                </label>
+            </div>
+            <div class="form-check mb-2 ms-3">
+                <input class="form-check-input" type="checkbox" name="checkbox2" id="checkbox2" value="2">
+                <label class="form-check-label" for="checkbox2">
+                    Checkbox 2
+                </label>
+            </div>
+            <div class="form-check mb-4 ms-3">
+                <input class="form-check-input" type="checkbox" name="checkbox3" id="checkbox3" value="3">
+                <label class="form-check-label" for="checkbox3">
+                    Checkbox 3
+                </label>
+            </div>
+        
+            <div class="form-check mb-2 ms-3">
+                <input class="form-check-input" type="radio" name="radioOption" id="radio1" value="1">
+                <label class="form-check-label" for="radio1">
+                    Radio 1
+                </label>
+            </div>
+            <div class="form-check mb-2 ms-3">
+                <input class="form-check-input" type="radio" name="radioOption" id="radio2" value="2">
+                <label class="form-check-label" for="radio2">
+                    Radio 2
+                </label>
+            </div>
+            <div class="form-check mb-4 ms-3">
+                <input class="form-check-input" type="radio" name="radioOption" id="radio3" value="3">
+                <label class="form-check-label" for="radio3">
+                    Radio 3
+                </label>
+            </div>
+
+            <div class="mb-3 ms-3">
+                <label for="inputText1" class="form-label">Login</label>
+                <input type="text" class="form-control" id="inputText1" name="inputText1">
+            </div>
+            <div class="mb-3 ms-3">
+                <label for="inputText2" class="form-label">Password</label>
+                <input type="text" class="form-control" id="inputText2" name="inputText2">
+            </div>
+            <button type="submit" class="btn btn-primary ms-3">Submit</button>
+        </form>
+</main>
