@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Web_253502_Alkhovik.Models;
-using System.Collections.Generic;
+using Web_253502_Alkhovik.Helpers;
 
 namespace Web_253502_Alkhovik.Controllers
 {
@@ -16,10 +15,12 @@ namespace Web_253502_Alkhovik.Controllers
                 new ListDemo { Id = 3, Name = "Item 3" }
             };
 
-            var selectList = new SelectList(listItems, "Id", "Name");
-            ViewBag.SelectList = selectList;
+            var viewModel = new IndexViewModel
+            {
+                ListItems = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(listItems, "Id", "Name")
+            };
 
-            return View();
+            return View(viewModel);
         }
     }
 }

@@ -13,8 +13,32 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/audi.jpg",
+      "PackagePath": "staticwebassets/images/audi.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/bmw.jpg",
+      "PackagePath": "staticwebassets/images/bmw.jpg"
+    },
+    {
       "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/default.png",
       "PackagePath": "staticwebassets/images/default.png"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/ford.jpg",
+      "PackagePath": "staticwebassets/images/ford.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/mercedes.jpg",
+      "PackagePath": "staticwebassets/images/mercedes.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/toyota.jpg",
+      "PackagePath": "staticwebassets/images/toyota.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/images/vw.jpg",
+      "PackagePath": "staticwebassets/images/vw.jpg"
     },
     {
       "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik/wwwroot/js/site.js",

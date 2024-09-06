@@ -1,70 +1,90 @@
 @{
     ViewBag.Title = "Index";
-    ViewData["Message"] = "Лабораторная работа №2";
 }
 
-<main class="container">
-        <h1>@ViewData["Message"]</h1>
-        <h1 class="text-uppercase">Список</h1>
-        <ol type="A" class="mb-4">
-            @for (int i = 1; i <= 3; i++)
-            {
-                <li>List element @i</li>
-            }
-        </ol>
-        
-        <h1 class="text-uppercase mt-4">Форма</h1>
-        
-        <form method="get" class="mb-4">
-            <div class="mb-4">
-                <label for="selectList" class="form-label">Выберите элемент:</label>
-                <select asp-items="ViewBag.SelectList" class="form-select" id="selectList" name="selectList"></select>
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello World</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <p class="fs-1 fw-bold">@ViewData["Message"]</p>
+            <div>
+                <p class="fs-3 fw-semibold">Список</p>
+                <ol class="list-group list-group-numbered" style="list-style-type: upper-alpha;"> 
+                    @for(var i = 0; i <5; i++)
+                    {<li>элемент @i списка</li>}
+                </ol>
             </div>
-            <div class="form-check mb-2 ms-3">
-                <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="1">
-                <label class="form-check-label" for="checkbox1">
-                    Checkbox 1
-                </label>
-            </div>
-            <div class="form-check mb-2 ms-3">
-                <input class="form-check-input" type="checkbox" name="checkbox2" id="checkbox2" value="2">
-                <label class="form-check-label" for="checkbox2">
-                    Checkbox 2
-                </label>
-            </div>
-            <div class="form-check mb-4 ms-3">
-                <input class="form-check-input" type="checkbox" name="checkbox3" id="checkbox3" value="3">
-                <label class="form-check-label" for="checkbox3">
-                    Checkbox 3
-                </label>
-            </div>
-        
-            <div class="form-check mb-2 ms-3">
-                <input class="form-check-input" type="radio" name="radioOption" id="radio1" value="1">
-                <label class="form-check-label" for="radio1">
-                    Radio 1
-                </label>
-            </div>
-            <div class="form-check mb-2 ms-3">
-                <input class="form-check-input" type="radio" name="radioOption" id="radio2" value="2">
-                <label class="form-check-label" for="radio2">
-                    Radio 2
-                </label>
-            </div>
-            <div class="form-check mb-4 ms-3">
-                <input class="form-check-input" type="radio" name="radioOption" id="radio3" value="3">
-                <label class="form-check-label" for="radio3">
-                    Radio 3
-                </label>
-            </div>
-            <div class="mb-3 ms-3">
-                <label for="inputText1" class="form-label">Login</label>
-                <input type="text" class="form-control" id="inputText1" name="inputText1">
-            </div>
-            <div class="mb-3 ms-3">
-                <label for="inputText2" class="form-label">Password</label>
-                <input type="text" class="form-control" id="inputText2" name="inputText2">
-            </div>
-            <button type="submit" class="btn btn-primary ms-3">Submit</button>
-        </form>
-</main>
+
+            <hr class="mt-3 mb-3"/>
+
+            <h3 class="fs-3 fw-bold">Форма</h3>
+
+            <form method="post" class="mt-3" asp-antiforgery="true">
+                <select class="mt-3 form-control" id="Model.SelectedId" name="selectDemo" asp-items="Model.ListItems">
+                </select>
+                <div class="form-group row mt-3">
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkbox1" name="checkbox1" />
+                            <label class="form-check-label" for="checkbox1">
+                                Чек-бокс 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkbox2" name="checkbox2" />
+                            <label class="form-check-label" for="checkbox2">
+                                Чек-бокс 2
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio1" name="radio1" />
+                            <label class="form-check-label" for="radio1">
+                                Радио-1
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio2" name="radio2" />
+                            <label class="form-check-label" for="radio2">
+                                Радио-2
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radio3" name="radio3" />
+                            <label class="form-check-label" for="radio3">
+                                Радио-3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <label for="login" class="col-sm-2 col-form-label">Логин: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" itemid="login" name="loginfield" placeholder="Введите имя" />
+                    </div>
+                </div>                
+                
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 col-form-label">Пароль: </label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" itemid="password" name="passwordfield" placeholder="Введите пароль" />
+                    </div>
+                </div>
+
+                <button type="submit" class="mt-3 btn btn-primary">Отправить</button>
+
+            </form>
+        </>
+    </main> 
+</body>
+</html>

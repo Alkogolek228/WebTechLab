@@ -6,7 +6,7 @@ namespace Web_253502_Alkhovik.Controllers
     {
         public IActionResult Logout()
         {
-            return View();
+            return NoContent();
         }
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
@@ -15,22 +16,18 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <header>
         <div class="container">
-            <!-- Панель навигации -->
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <!-- меню сайта -->
-                <partial name="_MenuPartial"/>
-                <!-- меню сайта - конец -->
-                <!-- Информация пользователя -->
-                <partial name="_UserInfoPartial"/>
-                <!-- Информация пользователя - конец -->
-            </nav>
-        </div><!-- container - конец -->
-    </header><!-- header - конец -->
 
+               <partial name="_MenuPartial" />
+
+               <partial name="_UserInfoPartial"/>
+
+            </nav>
+        </div>
+    </header>
     <main class="container">
         @RenderBody()
     </main>
-
     <footer class="bg-dark text-white mt-4" style="position: relative; bottom: 0; width: 100%;">
         <div class="container">
             <div class="navbar navbar-dark navbar-expand-md">
@@ -48,7 +45,6 @@
             </div>
         </div>
     </footer>
-
     @if (IsSectionDefined("Scripts"))
 	{
 		@await RenderSectionAsync("Scripts")
@@ -60,6 +56,5 @@
 		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="~/js/site.js" asp-append-version="true"></script>
 	}
-
 </body>
 </html>
