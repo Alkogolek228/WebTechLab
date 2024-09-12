@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/audi.jpg",
+      "PackagePath": "staticwebassets/images/audi.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/bmw.jpg",
+      "PackagePath": "staticwebassets/images/bmw.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/default.png",
+      "PackagePath": "staticwebassets/images/default.png"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/ford.jpg",
+      "PackagePath": "staticwebassets/images/ford.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/mercedes.jpg",
+      "PackagePath": "staticwebassets/images/mercedes.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/toyota.jpg",
+      "PackagePath": "staticwebassets/images/toyota.jpg"
+    },
+    {
+      "Id": "/home/neko/Documents/SPPR/Web_253502_Alkhovik.API/wwwroot/images/vw.jpg",
+      "PackagePath": "staticwebassets/images/vw.jpg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Web_253502_Alkhovik.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Web_253502_Alkhovik.API.props",
+      "PackagePath": "build\\Web_253502_Alkhovik.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Web_253502_Alkhovik.API.props",
+      "PackagePath": "buildMultiTargeting\\Web_253502_Alkhovik.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Web_253502_Alkhovik.API.props",
+      "PackagePath": "buildTransitive\\Web_253502_Alkhovik.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
