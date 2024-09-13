@@ -13,10 +13,10 @@ public class CarService : ICarService
 	{
 		_context = context;
 	}
-	public async Task<ResponseData<Car>> CreateProductAsync(Car car, IFormFile? formFile)
+	public async Task<ResponseData<Car>> CreateProductAsync(Car car)
 	{
 		var newProduct = await _context.Cars.AddAsync(car);
-
+		await _context.SaveChangesAsync();
 		return ResponseData<Car>.Success(newProduct.Entity);
 	}
 
@@ -29,6 +29,7 @@ public class CarService : ICarService
 		}
 
 		_context.Entry(product).State = EntityState.Deleted;
+		await _context.SaveChangesAsync();
 	}
 
 	public async Task<ResponseData<Car>> GetProductByIdAsync(int id)
@@ -99,5 +100,6 @@ public class CarService : ICarService
 		product.Image = car.Image;
 
 		_context.Entry(product).State = EntityState.Modified;
+		await _context.SaveChangesAsync();
 	}
 }

@@ -10,6 +10,6 @@ public interface ICarService
 	public Task<ResponseData<Car>> GetProductByIdAsync(int id);
 	public Task UpdateProductAsync(int id, Car car, IFormFile? formFile);
 	public Task DeleteProductAsync(int id);
-	public Task<ResponseData<Car>> CreateProductAsync(Car car, IFormFile? formFile);
+	public Task<ResponseData<Car>> CreateProductAsync(Car car);
 	public Task<ResponseData<string>> SaveImageAsync(int id, IFormFile formFile);
 }

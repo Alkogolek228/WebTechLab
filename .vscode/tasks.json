@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": ["build", "${workspaceFolder}/Web_253502_Alkhovik/Web_253502_Alkhovik.csproj"],
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": ["build", "${workspaceFolder}/Web_253502_Alkhovik.API/Web_253502_Alkhovik.API.csproj"],
+        "problemMatcher": "$msCompile"
+      }
+    ]
+  }
