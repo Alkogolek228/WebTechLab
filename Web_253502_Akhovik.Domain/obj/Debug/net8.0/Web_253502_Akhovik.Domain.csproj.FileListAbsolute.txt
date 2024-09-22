@@ -1,0 +1,12 @@
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/bin/Debug/net8.0/Web_253502_Akhovik.Domain.deps.json
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/bin/Debug/net8.0/Web_253502_Akhovik.Domain.dll
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/bin/Debug/net8.0/Web_253502_Akhovik.Domain.pdb
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.AssemblyInfoInputs.cache
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.AssemblyInfo.cs
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.csproj.CoreCompileInputs.cache
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.dll
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/refint/Web_253502_Akhovik.Domain.dll
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.pdb
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/ref/Web_253502_Akhovik.Domain.dll
+/home/neko/Documents/SPPR/Web_253502_Akhovik.Domain/obj/Debug/net8.0/Web_253502_Akhovik.Domain.sourcelink.json

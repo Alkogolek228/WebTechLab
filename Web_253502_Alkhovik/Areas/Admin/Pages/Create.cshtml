@@ -1,0 +1,45 @@
+@page
+@model Web_253502_Alkhovik.Areas.Admin.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Car</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Car.Amount" class="control-label"></label>
+                <input asp-for="Car.Amount" class="form-control" />
+                <span asp-validation-for="Car.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.CategoryId" class="control-label"></label>
+                <select asp-for="Car.CategoryId" class="form-control" asp-items="Model.Categories"></select>
+                <span asp-validation-for="Car.CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.Description" class="control-label"></label>
+                <input asp-for="Car.Description" class="form-control" />
+                <span asp-validation-for="Car.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.Image" class="control-label"></label>
+                <input asp-for="Car.Image" class="form-control" />
+                <span asp-validation-for="Car.Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.Price" class="control-label"></label>
+                <input asp-for="Car.Price" class="form-control" />
+                <span asp-validation-for="Car.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
