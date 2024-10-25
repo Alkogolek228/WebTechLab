@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_253502_Alkhovik", "Web_253502_Alkhovik.csproj", "{ACB36847-482F-4D15-A932-F933BE735A83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_253502_Alkhovik.API", "Web_253502_Alkhovik.API\Web_253502_Alkhovik.API.csproj", "{6A3201FC-E999-48C3-917F-F206642D9998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB36847-482F-4D15-A932-F933BE735A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB36847-482F-4D15-A932-F933BE735A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB36847-482F-4D15-A932-F933BE735A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB36847-482F-4D15-A932-F933BE735A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3201FC-E999-48C3-917F-F206642D9998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3201FC-E999-48C3-917F-F206642D9998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3201FC-E999-48C3-917F-F206642D9998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3201FC-E999-48C3-917F-F206642D9998}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00BA2FBD-2C74-4B09-A7DB-C8BEDB173EB9}
+	EndGlobalSection
+EndGlobal
