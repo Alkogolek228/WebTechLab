@@ -38,15 +38,17 @@
         </div>
     </div>
     
-    @{
-        await Html.RenderPartialAsync("_PagerAndCardsPartial", new
-        {
-            CurrentCategory = category,
-            ReturnUrl = returnUrl,
-            CurrentPage = Model.CurrentPage,
-            TotalPages = Model.TotalPages,
-            Products = Model.Items,
-            Admin = false
-        });
-    }
+    <div id="catalog">
+        @{
+            await Html.RenderPartialAsync("_PagerAndCardsPartial", new
+            {
+                CurrentCategory = category,
+                ReturnUrl = returnUrl,
+                CurrentPage = Model.CurrentPage,
+                TotalPages = Model.TotalPages,
+                Products = Model.Items,
+                Admin = false
+            });
+        }
+    </div>
 </div>

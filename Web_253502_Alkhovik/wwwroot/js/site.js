@@ -2,16 +2,25 @@
     $(document).on('click', '.pagination a', function (event) {
         event.preventDefault();
         var page = $(this).attr('href').split('pageNo=')[1];
-        loadPage(page);
+        var currentPath = window.location.pathname;
+
+        if (currentPath.startsWith('/Admin')) {
+            loadPage(page, '/Admin/Index', '#adminContent');
+        } else {
+            loadPage(page, '/Product/Index', '#catalog');
+        }
     });
 
-    function loadPage(page) {
+    function loadPage(page, url, container) {
         $.ajax({
-            url: '/Product/Index',
+            url: url,
             type: 'GET',
             data: { pageNo: page },
             success: function (data) {
-                $('#catalog').html(data);
+                $(container).html(data);
+            },
+            error: function (xhr, status, error) {
+                console.error("Error loading page: ", status, error);
             }
         });
     }

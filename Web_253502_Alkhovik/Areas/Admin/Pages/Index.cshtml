@@ -6,13 +6,15 @@
 <div class="container">
     <p class="fs-3 fw-bold">Index</p>
     <a class="btn btn-primary" asp-area="Admin" asp-page="/Create">Create</a>
-    @{
-        await Html.RenderPartialAsync("_PagerAndCardsPartial", new
-        {
-            CurrentPage = Model.CurrentPage,
-            TotalPages = Model.TotalPages,
-            Cars = Model.Cars,
-            Admin = true,
-        });
-    }
+    <div id="adminContent">
+        @{
+            await Html.RenderPartialAsync("_PagerAndCardsPartial", new
+            {
+                CurrentPage = Model.CurrentPage,
+                TotalPages = Model.TotalPages,
+                Cars = Model.Cars,
+                Admin = true,
+            });
+        }
+    </div>
 </div>
