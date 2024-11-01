@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Cd6O0ajItTM=",
+  "dgSpecHash": "ECpMRcXsM08=",
   "success": true,
   "projectFilePath": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik\\Web_253502_Alkhovik.csproj",
   "expectedPackageFiles": [
@@ -58,7 +58,10 @@
     "C:\\Users\\alkho\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
     "C:\\Users\\alkho\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "C:\\Users\\alkho\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\8.0.10\\microsoft.aspnetcore.authentication.openidconnect.8.0.10.nupkg.sha512",
+    "C:\\Users\\alkho\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\alkho\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\alkho\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
+    "C:\\Users\\alkho\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
     "C:\\Users\\alkho\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\alkho\\.nuget\\packages\\microsoft.build\\17.8.3\\microsoft.build.17.8.3.nupkg.sha512",
     "C:\\Users\\alkho\\.nuget\\packages\\microsoft.build.framework\\17.8.3\\microsoft.build.framework.17.8.3.nupkg.sha512",

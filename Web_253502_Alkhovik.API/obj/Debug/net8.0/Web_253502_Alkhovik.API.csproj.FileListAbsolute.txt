@@ -571,3 +571,4 @@ D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik.API\bin\Debug\net8.0
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik.API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik.API\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik.API\obj\Debug\net8.0\Web_253502_Alkhovik.API.sourcelink.json

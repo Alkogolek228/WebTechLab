@@ -563,3 +563,4 @@ D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\obj\Debug\net8.0\Web
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\obj\Debug\net8.0\ref\Web_253502_Alkhovik.dll
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\obj\Debug\net8.0\Web_253502_Alkhovik.sourcelink.json
