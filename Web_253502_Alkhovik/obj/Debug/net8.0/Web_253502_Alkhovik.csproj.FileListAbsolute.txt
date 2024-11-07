@@ -564,3 +564,12 @@ D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\obj\Debug\net8.0\ref
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\obj\Debug\net8.0\Web_253502_Alkhovik.sourcelink.json
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\test\WebTechLab-Lab5\WebTechLab-Lab5\Web_253502_Alkhovik\bin\Debug\net8.0\Serilog.Sinks.File.dll

@@ -5,6 +5,9 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Web_253502_Alkhovik.Extensions;
 using Web_253502_Alkhovik.Helpers;
+using Serilog;
+using Serilog.Events;
+using Web_253502_Alkhovik.Middleware;
 using Web_253502_Alkhovik.Services.Authentication;
 using Web_253502_Alkhovik.Services.CategoryService;
 using Web_253502_Alkhovik.Services.CarService;
@@ -76,6 +79,11 @@ builder.Services.AddSession();
 
 builder.Services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
 
+builder.Host.UseSerilog((context, configuration) =>
+{
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -93,11 +101,16 @@ app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseRequestLogginMiddleware();
+
 app.MapRazorPages();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllers();
+
+app.UseSerilogRequestLogging();
 
 app.Run();
