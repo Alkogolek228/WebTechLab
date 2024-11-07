@@ -9,6 +9,8 @@ using Web_253502_Alkhovik.Services.Authentication;
 using Web_253502_Alkhovik.Services.CategoryService;
 using Web_253502_Alkhovik.Services.CarService;
 using Web_253502_Alkhovik.Services.FileService;
+using Web_253502_Alkhovik.Services.CartService;
+using Web_253502_Alkhovik.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,11 +19,6 @@ builder.Services.AddRazorPages();
 builder.RegisterCustomServices();
 
 builder.Services.Configure<UriData>(builder.Configuration.GetSection("UriData"));
-
-//builder.Services.AddScoped<ICategoryService, ApiCategoryService>()
- //               .AddScoped<ICarService, ApiCarService>()
-  //              .AddScoped<IFileService, ApiFileService>();
-
 builder.Services.AddHttpClient("api", client =>
 {
     var uriData = builder.Services.BuildServiceProvider().GetRequiredService<IOptions<UriData>>().Value;
@@ -74,6 +71,10 @@ builder.Services.AddAuthorization(options =>
     });
 });
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
+builder.Services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
 
 var app = builder.Build();
 
@@ -87,6 +88,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();
