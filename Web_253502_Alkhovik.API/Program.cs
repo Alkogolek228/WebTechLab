@@ -36,6 +36,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
     });
 
+builder.Services.AddCors(b =>
+{
+	b.AddPolicy("default", policy =>
+	{
+		policy.AllowAnyMethod()
+			  .AllowAnyOrigin()
+			  .AllowAnyHeader();
+	});
+});
+
 builder.Services.AddAuthorization(opt =>
 {
     opt.AddPolicy("admin", policy =>
@@ -62,6 +72,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseCors("default");
 
 app.UseRouting();
 

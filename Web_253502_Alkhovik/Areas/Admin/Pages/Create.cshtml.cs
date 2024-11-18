@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,50 +8,45 @@ using Web_253502_Alkhovik.Services.CarService;
 
 namespace Web_253502_Alkhovik.Areas.Admin.Pages;
 
+[Authorize(Policy = "admin")]
 public class CreateModel : PageModel
 {
     private readonly ICarService _carService;
-    private readonly ICategoryService _categoryService;
+	private readonly ICategoryService _categoryService;
 
-    public CreateModel(ICarService carService, ICategoryService categoryService)
+	public CreateModel(ICarService carService, ICategoryService categoryService)
     {
         _carService = carService;
-        _categoryService = categoryService;
+		_categoryService = categoryService;
+
+		Categories = new SelectList(_categoryService.GetCategoryListAsync().Result.Data, "Id", "Name");
     }
-
-    public SelectList Categories { get; set; }
-
     public async Task<IActionResult> OnGetAsync()
     {
-        var categoryResponse = await _categoryService.GetCategoryListAsync();
-        if (!categoryResponse.Successfull)
-        {
-            return NotFound();
-        }
+		return Page();
+	}
 
-        Categories = new SelectList(categoryResponse.Data, "Id", "Name");
-        return Page();
-    }
+	[BindProperty]
+	public IFormFile? Image { get; set; }
 
-    [BindProperty]
-    public Car Car { get; set; } = default!;
+	[BindProperty]
+	public Car Car { get; set; } = default!;
 
-    [BindProperty]
-    public IFormFile? Image { get; set; }
+	public SelectList Categories { get; set; } 
+	public async Task<IActionResult> OnPostAsync()
+	{
+		if (!ModelState.IsValid)
+		{
+			return Page();
+		}
 
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
+		var response = await _carService.CreateProductAsync(Car, Image);
 
-        var response = await _carService.CreateProductAsync(Car, Image);
-        if (!response.Successfull)
-        {
-            return Page();
-        }
+		if (!response.Successfull)
+		{
+			return Page();
+		}
 
-        return RedirectToPage("./Index");
-    }
+		return RedirectToPage("./Index");
+	}
 }

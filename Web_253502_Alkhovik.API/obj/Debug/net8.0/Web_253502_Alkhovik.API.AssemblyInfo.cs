@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Web_253502_Alkhovik.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2350ad8ee2a1a86b9dd9d9978f2f64eea9140db1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bc2356946eafd2a1d89bce5e1ae85e343b0de41")]
 [assembly: System.Reflection.AssemblyProductAttribute("Web_253502_Alkhovik.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Web_253502_Alkhovik.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -39,5 +39,7 @@
     private void SetValue()
     {
         currentCount = counterModel.Value;
+        if (currentCount > 10)
+            currentCount = 10;
     }
 }

@@ -1,88 +1,92 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Web_253502_Alkhovik.Domain.Entities;
-using Web_253502_Alkhovik.Services.CategoryService;
+using Web_253502_Alkhovik.CategoryService;
 using Web_253502_Alkhovik.Services.CarService;
 
 namespace Web_253502_Alkhovik.Areas.Admin.Pages;
 
+[Authorize(Policy = "admin")]
 public class EditModel : PageModel
 {
-    private readonly ICarService _carService;
-    private readonly ICategoryService _categoryService;
+	private readonly ICarService _carService;
+	private readonly ICategoryService _categoryService;
+	public EditModel(ICarService carService, ICategoryService categoryService)
+	{
+		_carService = carService;
+		_categoryService = categoryService;
 
-    public EditModel(ICarService carService, ICategoryService categoryService)
-    {
-        _carService = carService;
-        _categoryService = categoryService;
-    }
+		Categories = new SelectList(_categoryService.GetCategoryListAsync().Result.Data, "Id", "Name");
+	}
+	public async Task<IActionResult> OnGetAsync(int? id)
+	{
+		if (id == null)
+		{
+			return NotFound();
+		}
 
-    public SelectList Categories { get; set; }
+		var response = await _carService.GetProductByIdAsync(id.Value);
 
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-        }
+		if (!response.Successfull)
+		{
+			return NotFound();
+		}
 
-        var response = await _carService.GetProductByIdAsync(id.Value);
-        if (!response.Successfull)
-        {
-            return NotFound();
-        }
+		var categoryResponse = await _categoryService.GetCategoryListAsync();
+		
+		if (!categoryResponse.Successfull)
+		{
+			return NotFound();
+		}
 
-        var categoryResponse = await _categoryService.GetCategoryListAsync();
-        if (!categoryResponse.Successfull)
-        {
-            return NotFound();
-        }
+		Car = response.Data!;
 
-        Categories = new SelectList(categoryResponse.Data, "Id", "Name");
-        Car = response.Data!;
-        CurrentImage = Car.Image;
-        return Page();
-    }
+		CurrentImage = Car.Image;
 
-    [BindProperty]
-    public IFormFile? Image { get; set; }
+		return Page();
+	}
 
-    [BindProperty]
-    public string? CurrentImage { get; set; }
+	[BindProperty]
+	public IFormFile? Image { get; set; }	
 
-    [BindProperty]
-    public Car Car { get; set; } = default!;
+	[BindProperty]
+	public string? CurrentImage { get; set; }
 
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
+	[BindProperty]
+	public Car Car { get; set; } = default!;
+	public SelectList Categories { get; set; }
 
-        try
-        {
-            await _carService.UpdateProductAsync(Car.Id, Car, Image);
-        }
-        catch (Exception)
-        {
-            if (!await CarsExists(Car.Id))
-            {
-                return NotFound();
-            }
-            else
-            {
-                throw;
-            }
-        }
+	public async Task<IActionResult> OnPostAsync()
+	{
+		if (!ModelState.IsValid)
+		{
+			return Page();
+		}
 
-        return RedirectToPage("./Index");
-    }
+		try
+		{
+			await _carService.UpdateProductAsync(Car.Id, Car, Image);
+		}
+		catch (Exception)
+		{
+			if (!await CarsExists(Car.Id))
+			{
+				return NotFound();
+			}
+			else
+			{
+				throw;
+			}
+		}
 
-    private async Task<bool> CarsExists(int id)
-    {
-        var response = await _carService.GetProductByIdAsync(id);
-        return response.Successfull;
-    }
+		return RedirectToPage("./Index");
+	}
+
+	private async Task<bool> CarsExists(int id)
+	{
+		var response = await _carService.GetProductByIdAsync(id);
+		return response.Successfull;
+	}
 }

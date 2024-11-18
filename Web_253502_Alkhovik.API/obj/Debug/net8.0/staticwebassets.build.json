@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "opMRyxKkrWoLQo0QqSkhu4r5iUdAz+K8H/F+m5qNDuc=",
+  "Hash": "l/bMrP+3DGMvfyvmTzZis33vpGeO4mFJkPVUhkSu4Os=",
   "Source": "Web_253502_Alkhovik.API",
   "BasePath": "_content/Web_253502_Alkhovik.API",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "wwwroot\\images\\bmw.jpg"
     },
     {
+      "Identity": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik.API\\wwwroot\\images\\default-profile-picture.png",
+      "SourceId": "Web_253502_Alkhovik.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik.API\\wwwroot\\",
+      "BasePath": "_content/Web_253502_Alkhovik.API",
+      "RelativePath": "images/default-profile-picture.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default-profile-picture.png"
+    },
+    {
       "Identity": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik.API\\wwwroot\\images\\default.png",
       "SourceId": "Web_253502_Alkhovik.API",
       "SourceType": "Discovered",
@@ -72,25 +91,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\default.png"
-    },
-    {
-      "Identity": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik.API\\wwwroot\\images\\f3f23ckc.png",
-      "SourceId": "Web_253502_Alkhovik.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik.API\\wwwroot\\",
-      "BasePath": "_content/Web_253502_Alkhovik.API",
-      "RelativePath": "images/f3f23ckc.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\f3f23ckc.png"
     },
     {
       "Identity": "D:\\test\\WebTechLab-Lab5\\WebTechLab-Lab5\\Web_253502_Alkhovik.API\\wwwroot\\images\\ford.jpg",

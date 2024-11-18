@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Web_253502_Alkhovik.Domain.Entities;
@@ -6,6 +7,7 @@ using Web_253502_Alkhovik.Services.CarService;
 
 namespace Web_253502_Alkhovik.Areas.Admin.Pages;
 
+[Authorize(Policy = "admin")]
 public class DeleteModel : PageModel
 {
 	private readonly ICarService _carService;
